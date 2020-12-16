@@ -1,0 +1,57 @@
+use bdanime;
+
+select * from serie;
+
+CREATE TABLE CLIENTE(
+ID_CLIENTE INT AUTO_INCREMENT ,
+DNI CHAR(8) NOT NULL,
+NOMBRES VARCHAR(60) NOT NULL,
+APE_PATERNO VARCHAR(60) NOT NULL,
+APE_MATERNO VARCHAR(60) NOT NULL,
+DIRECCION VARCHAR(70) NOT NULL,
+TELEFONO CHAR(9) NOT NULL,
+EMAIL VARCHAR(50) UNIQUE NOT NULL,
+PASS VARCHAR(50) NOT NULL,
+PRIMARY KEY (ID_CLIENTE)
+);
+
+select * from cliente;
+
+drop table DETALLE_FACTURA;
+drop table FACTURA;
+drop table cliente;
+
+CREATE TABLE FACTURA(
+NRO_FACTURA int auto_increment NOT NULL , 
+ID_CLIENTE INT NOT NULL,
+FECHA DATE NOT NULL,
+MONTO_TOTAL NUMERIC(9,3) NOT NULL,
+PRIMARY KEY (NRO_FACTURA),
+FOREIGN KEY(ID_CLIENTE)REFERENCES CLIENTE(ID_CLIENTE)
+);
+
+CREATE TABLE DETALLE_FACTURA(
+NRO_FACTURA int NOT NULL,
+ID_SERIE INT NOT NULL,
+PRECIO_UNIDAD NUMERIC(8,3) NOT NULL,
+CANTIDAD INTEGER NOT NULL ,
+PRIMARY KEY(NRO_FACTURA , ID_SERIE),
+FOREIGN KEY(NRO_FACTURA)REFERENCES FACTURA(NRO_FACTURA),
+FOREIGN KEY(ID_SERIE)REFERENCES SERIE(ID_SERIE)
+);
+
+
+select * from cliente;
+
+insert into cliente values(null , '10235232','Juan Alberto','Quispe','Salazar','chorrillos Av.123','987567102','juan12@gmail.com','123456');
+
+insert into cliente values(null , '10445221','Maria','Caceres','Zulman','Lima 123','912147109','maria01@gmail.com','123456');
+
+select* from FACTURA;
+
+select ifnull(max(nro_factura),1) from factura;
+
+delete from factura;
+select * from DETALLE_FACTURA
+
+insert into factura values(1,1,now(),200);

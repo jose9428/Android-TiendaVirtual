@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="171dp"
+        android:layout_height="47dp"
+        android:drawableLeft="@drawable/carrito2"
+        android:onClick="irCarrito"
+        android:text="CARRITO"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#1A48F2" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="289dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login" />
+
+    <EditText
+        android:id="@+id/txtEmailUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="Digite correo"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/txtContraseñaUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Digite Contraseña"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/BtnIniciarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:onClick="iniciarSesion"
+        android:text="INICIAR SESION"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#1A48F2" />
+
+    <Button
+        android:id="@+id/BtnRegistrarse"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:onClick="Registrarse"
+        android:text="REGISTRARSE"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#2BB144" />
+
+</LinearLayout>

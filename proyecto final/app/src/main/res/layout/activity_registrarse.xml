@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="171dp"
+        android:layout_height="47dp"
+        android:drawableLeft="@drawable/carrito2"
+        android:onClick="irCarrito"
+        android:text="CARRITO"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#1A48F2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="122dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="5dp"
+        android:text="REGISTRARSE"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtDNIRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite su DNI"
+        android:inputType="number"
+        android:maxLength="8" />
+
+    <EditText
+        android:id="@+id/txtNombresRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite sus nombres"
+        android:inputType="textPersonName"
+        android:maxLength="30" />
+
+    <EditText
+        android:id="@+id/txtApellidoPaternoRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite su Apellido Paterno"
+        android:inputType="textPersonName"
+        android:maxLength="30" />
+
+    <EditText
+        android:id="@+id/txtApellidoMaternoRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite su Apellido Materno"
+        android:inputType="textPersonName"
+        android:maxLength="30" />
+
+    <EditText
+        android:id="@+id/txtDireccionRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite su Direccion"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/txtTelefonoRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite su Telefono"
+        android:inputType="phone"
+        android:maxLength="9" />
+
+    <EditText
+        android:id="@+id/txtEmailRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite su Email"
+        android:inputType="textEmailAddress"
+        android:maxLength="30" />
+
+    <EditText
+        android:id="@+id/txtContraseñaRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite su Contraseña"
+        android:inputType="textPassword"
+        android:maxLength="30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:onClick="registrarse"
+            android:text="REGISTRARSE"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#1A48F2"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:onClick="inciarSesion"
+            android:text="INICIAR SESION"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#2BB144"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="15dp" />
+    </LinearLayout>
+
+</LinearLayout>
